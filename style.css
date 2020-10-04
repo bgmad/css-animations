@@ -55,7 +55,7 @@ body {
     height: 100vh;
     background: red;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
 }
 
 /* columns */
@@ -65,9 +65,6 @@ div.col {
     background: lightskyblue;
     display: flex;
     justify-content: center;
-}
-div.col:hover {
-    background: lightblue;
 }
 
 /* box inside of columns */
@@ -117,4 +114,22 @@ div.box-3 {
     animation-duration: alternate;
     animation-delay: 1s;
     animation-duration: 2s;
+}
+
+/* adjust for mobile */
+@media (max-width: 1200px) {
+    .box-1 {
+        height: 25%;
+    }
+    .box-2 {
+        height: 25%;
+    }
+    .box-3 {
+        height: 25%;
+    }
+    @keyframes top-to-bottom {
+        0% {top: 0%;}
+        50% {top: 75%}
+        100% {top: 0%;}
+    }
 }
